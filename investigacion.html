@@ -1,0 +1,73 @@
+
+<!-- VARIABLES CSS: 
+
+     las denominadas variables CSS realmente no son variables, sino que solemos denominarlas así por su parecido con la programación y porque es más fácil comprender rápidamente lo que son, pero tienen sus diferencias. La forma oficial de llamarlas es custom properties (propiedades personalizadas).
+
+     son un mecanismo de CSS que permite dar un valor personalizado a las propiedades. El objetivo principal suele ser evitar escribir múltiples veces ese valor, y en su lugar, ponerle un nombre más lógico y fácil de recordar, que hará referencia al valor real. De esta forma, si necesitamos cambiar el valor en algún momento, podemos hacerlo en esa propiedad personalizada y no en múltiples partes del documento, donde nos podríamos equivocar al añadir el mismo valor o incluso hacer mucho más difícil de mantener el código.
+
+     Para definir una custom property haremos uso de los dos guiones -- previos al nombre que queramos utilizar. Además, debemos fijarnos en el elemento que definimos la variable, en este ejemplo la pseudoclase :root:
+
+    :root {
+        --background-color: black;
+    }
+
+    La pseudoclase :root hace referencia al elemento raíz del documento, o lo que es lo mismo, al elemento <html>. La diferencia de utilizar html o :root como selector es que este último tiene algo más de especificidad CSS.
+
+    Al colocarla en :root estamos definiendo que la custom property estará definida para el ámbito de esa etiqueta <html> (o cualquier elemento hijo), es decir, a todo el documento.
+
+        Utilizar una variable CSS: hay que utilizarla dentro de la expresión var():
+        .element {
+            background: var(--background-color, blue);
+        }
+        En este caso estamos aplicando a la propiedad background el valor que contiene --background-color para el elemento .element. Esto último es muy importante entenderlo, ya que una custom property puede tener diferentes valores dependiendo del ámbito en el que se encuentra.
+
+        Además, es muy recomendable que la expresión var() tenga dos parámetros. El primero de ellos, la custom property en cuestión, el segundo de ellos, el valor por defecto en el caso de que esa propiedad no esté definida en el ámbito actual.
+
+        Esto nos permite mucha flexibilidad y potencia a la hora de utilizar custom properties en CSS, ya que son tremendamente útiles y versátiles, permitiéndonos utilizar incluso la cascada de CSS a nuestro favor.
+
+FIRST MOBILE: La importancia por la cuál es necesario diseñar primero el diseño movil es a la creciente tendencia a usar más y más los móviles al visitar sitios web. Debido a esto surge movile first que significa diseñar primero para móviles. obligando al desarrollador a centrarse únicamente en los elementos y las acciones más importantes de un sitio web, logrando que la experiencia e interacción del usuario sea optima. Además es mucho más sencillo rellenar que limpiar. 
+
+RESPONSIVE DESING: En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de diseño web responsivo (RWD, responsive web design), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo.
+
+A medida que la web móvil comenzó a hacerse realidad con los primeros teléfonos con funciones, las empresas que deseaban adoptar los dispositivos móviles solían crear una versión especial de su sitio web para dispositivo móvil, con una URL diferente (a menudo algo así como m.example.com o example.mobi). Esto significaba que había que desarrollar y actualizar dos versiones independientes del sitio web.
+
+Se desarrollaron varios enfoques para tratar de resolver los inconvenientes de los métodos líquidos o de ancho fijo para crear sitios web. En 2004, Cameron Adams escribió una publicación titulada Resolution dependent layout, que describe un método para crear un diseño que podría adaptarse a diferentes resoluciones de pantalla. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.
+
+Zoe Mickley Gillenwater fue determinante en su trabajo de descripción y formalización de los diversos modos en que se podían crear sitios web flexibles para intentar encontrar una situación intermedia entre llenar toda la pantalla o tener un tamaño completamente fijo.
+
+El término diseño responsivo fue acuñado por Ethan Marcotte en 2010, y describía el uso combinado de tres técnicas.
+
+La primera era la idea de las redes fluidas, La segunda técnica era la idea de las imágenes fluidas, El tercer componente clave era la consulta a los media. 
+
+Es importante comprender que el diseño web responsivo no es una tecnología independiente: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede responder según el dispositivo que se utiliza para ver un contenido
+
+
+OBJECT-FIT:
+        La propiedad CSS establece cómo se debe cambiar el tamaño del contenido de un elemento reemplazado , como un o , para que se ajuste a su contenedor.object-fit <img><video>
+
+    Puede modificar la alineación del objeto de contenido del elemento reemplazado dentro del cuadro del elemento usando la object-positionpropiedad.
+
+object-fit: contain; El contenido reemplazado se escala para mantener su relación de aspecto mientras se ajusta al cuadro de contenido del elemento. Todo el objeto está hecho para llenar el cuadro, conservando su relación de aspecto, por lo que el objeto se "encuadrará" si su relación de aspecto no coincide con la relación de aspecto del cuadro. 
+object-fit: cover; El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena todo el cuadro de contenido del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su cuadro, el objeto se recortará para que quepa.
+object-fit: fill; El contenido reemplazado se dimensiona para llenar el cuadro de contenido del elemento. Todo el objeto llenará completamente la caja. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su cuadro, entonces el objeto se estirará para que quepa.
+object-fit: none; El contenido reemplazado no cambia de tamaño.
+object-fit: scale-down;El contenido se dimensiona como si se especificara noneo contain, lo que resulte en un tamaño de objeto concreto más pequeño.
+
+/* Global values */
+object-fit: inherit;
+object-fit: initial;
+object-fit: revert;
+object-fit: revert-layer;
+object-fit: unset;
+
+
+
+
+
+
+
+
+
+
+
+-->
